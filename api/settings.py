@@ -26,9 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!^)61%h3gk346%qy_a_=6g@v#bfxw*p$azcwszw$csj(^&_v7y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','django-ubos.herokuapp.com']
+# ALLOWED_HOSTS = ['localhost','django-ubos.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1:8000', 'localhost', '127.0.0.1', '.vercel.app']
 
 # Application definition
 
