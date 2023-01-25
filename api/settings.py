@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-!^)61%h3gk346%qy_a_=6g@v#bfxw*p$azcwszw$csj(^&_v7y
 DEBUG = True
 
 # ALLOWED_HOSTS = ['localhost','django-ubos.herokuapp.com']
-ALLOWED_HOSTS = ['127.0.0.1:8000', 'localhost', '127.0.0.1', '.vercel.app']
+# ALLOWED_HOSTS = ['127.0.0.1:8000', 'localhost', '127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 # Application definition
 
@@ -138,9 +139,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
-STATIC_ROOT=os.path.join(BASE_DIR, 'static')
+# STATIC_URL = 'static/'
+# STATIC_ROOT=os.path.join(BASE_DIR, 'static')
 
 
 # STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
